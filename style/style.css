@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Raleway";
   src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
@@ -17,7 +18,7 @@
   font-family: "Raleway";
 }
 
-.footer-h6, .latest-blog-1 .blog-box .watch-comment h6, .latest-blog-1 .blog-box .blog .latest-data, .latest-blog-1 .blog-box, .some-work-section .some-work .work-1 .button-work, .some-work-section .some-work .work-2 .button-work, .some-work-section .some-work .work-3 .button-work, .some-work-section .some-work .work-4 .button-work, .some-work-section .some-work .work-5 .button-work, .some-work-section .some-work .work-6 .button-work, .some-work-section .some-work .work-7 .button-work, .our-team-section .team-box .our-team-1 .button-links .facebook-icon, .our-team-section .team-box .our-team-1 .button-links .twitter-icon, .our-team-section .team-box .our-team-1 .button-links .pinterest-icon, .our-team-section .team-box .our-team-1 .button-links .instagram-icon, .our-team-section .team-box .our-team-2 .button-links .facebook-icon, .our-team-section .team-box .our-team-2 .button-links .twitter-icon, .our-team-section .team-box .our-team-2 .button-links .pinterest-icon, .our-team-section .team-box .our-team-2 .button-links .instagram-icon, .our-team-section .team-box .our-team-3 .button-links .facebook-icon, .our-team-section .team-box .our-team-3 .button-links .twitter-icon, .our-team-section .team-box .our-team-3 .button-links .pinterest-icon, .our-team-section .team-box .our-team-3 .button-links .instagram-icon, .our-team-section .team-box .our-team-1 .button-links, .our-team-section .team-box .our-team-2 .button-links, .our-team-section .team-box .our-team-3 .button-links, .our-team-section .team-box, .number-section div, .story-section .story-img, .banner .banner-slider .slider-1, .banner .banner-slider .slider-2, .banner .banner-slider .slider-3, .banner .banner-slider .slider-4, .banner .banner-slider, .banner .banner-content, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-section, .clients-section, .latest-blog-1, .latest-blog-2 {
+.footer-h6, .latest-blog-1 .blog-box .watch-comment h6, .latest-blog-1 .blog-box .blog .latest-data, .latest-blog-1 .blog-box, .some-work-section .some-work .work-1 .button-work, .some-work-section .some-work .work-2 .button-work, .some-work-section .some-work .work-3 .button-work, .some-work-section .some-work .work-4 .button-work, .some-work-section .some-work .work-5 .button-work, .some-work-section .some-work .work-6 .button-work, .some-work-section .some-work .work-7 .button-work, .our-team-section .team-box .our-team-1 .button-links .facebook-icon, .our-team-section .team-box .our-team-1 .button-links .twitter-icon, .our-team-section .team-box .our-team-1 .button-links .pinterest-icon, .our-team-section .team-box .our-team-1 .button-links .instagram-icon, .our-team-section .team-box .our-team-2 .button-links .facebook-icon, .our-team-section .team-box .our-team-2 .button-links .twitter-icon, .our-team-section .team-box .our-team-2 .button-links .pinterest-icon, .our-team-section .team-box .our-team-2 .button-links .instagram-icon, .our-team-section .team-box .our-team-3 .button-links .facebook-icon, .our-team-section .team-box .our-team-3 .button-links .twitter-icon, .our-team-section .team-box .our-team-3 .button-links .pinterest-icon, .our-team-section .team-box .our-team-3 .button-links .instagram-icon, .our-team-section .team-box .our-team-1 .button-links, .our-team-section .team-box .our-team-2 .button-links, .our-team-section .team-box .our-team-3 .button-links, .our-team-section .team-box, .service-section .service-box .acor-container label, .number-section div, .story-section .story-img, .banner .banner-slider .slider-1, .banner .banner-slider .slider-2, .banner .banner-slider .slider-3, .banner .banner-slider .slider-4, .banner .banner-slider, .banner .banner-content, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-section, .clients-section, .latest-blog-1, .latest-blog-2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +26,22 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 7px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #F5F5F5;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #95E1D3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #F38281;
 }
 
 h1 {
@@ -95,8 +112,7 @@ ul, li {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgba(225, 135, 131, 0.8);
-  opacity: 0.9;
+  background-color: rgba(225, 135, 131, 0.9);
   height: 100px;
 }
 .header_navbar .navbar_menu {
@@ -375,11 +391,62 @@ ul, li {
   margin-top: 80px;
   margin-bottom: 114px;
   display: flex;
-}
-.service-section .service-box .box {
-  width: 570px;
+  justify-content: space-between;
+  width: 100%;
   height: 483px;
-  border: 2px solid red;
+}
+.service-section .service-box .acor-container {
+  width: 570px;
+  height: 100%;
+}
+.service-section .service-box .acor-container .acor-body {
+  width: 100%;
+  height: 0;
+  line-height: 18px;
+  padding-right: 54px;
+  transition: padding 0.5s;
+  overflow: auto;
+  margin-bottom: 22px;
+  transition: 0.25s;
+}
+.service-section .service-box .acor-container .acor-body h5 {
+  text-align: start;
+  line-height: 21.13px;
+}
+.service-section .service-box .acor-container label {
+  cursor: pointer;
+  text-transform: uppercase;
+  justify-content: space-between;
+  z-index: 1;
+  border: 1px solid #C6CBCD;
+  width: 100%;
+  height: 92px;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 12px 20px 12px 10px;
+  transition: color 0.35s;
+}
+.service-section .service-box .acor-container label::after {
+  content: "❯";
+  float: right;
+  margin-left: 220px;
+  color: #C6CBCD;
+  transform: rotate(90deg);
+}
+.service-section .service-box .acor-container input {
+  display: none;
+}
+.service-section .service-box .acor-container input:checked + label::after {
+  transition: transform 0.35s;
+  transform: rotate(-90deg);
+}
+.service-section .service-box .acor-container input:checked + label + .acor-body {
+  height: 163px;
+  border: 17px solid #FFFFFF;
+  outline: 1px solid #C6CBCD;
+  outline-offset: -1px;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 .comment, .comment-2 {
