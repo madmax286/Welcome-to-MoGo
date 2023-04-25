@@ -27,6 +27,8 @@ $white-color: #F8F8F8;
 $white-color-2: #F5F5F5;
 $gray-color: #C6CBCD;
 
+$font-adapt: calc(1vh + 1vw);
+
 %display-flex-center {
     display: flex;
     justify-content: center;
@@ -53,7 +55,7 @@ html {
 h1 {
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: 144px;
+    font-size: calc($font-adapt*7);
     line-height: 175.54px;
     text-align: center;
     text-transform: uppercase;
@@ -93,8 +95,8 @@ ul, li {
     border-top: 4px solid $pink-color;
     margin: 45px 0;
 }
-.banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-section, .clients-section, .latest-blog-1, .latest-blog-2 {
-    padding: 0 170px;
+.banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
+    padding: 0 10%;
     @extend %display-flex-center;
     flex-direction: column;
 }
@@ -107,18 +109,23 @@ ul, li {
     .navbar {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         background-color: rgba(225, 135, 131, 0.9);
         height: 100px;
+
+        > a {
+            margin-left: 10%;
+        }
     }    
     .navbar_menu {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         text-align: center;
+        margin-right: 15%;
 
         img {
-            margin-left: 34px;
+            margin-left: 10%;
 
             &:hover {
                 cursor: pointer;
@@ -130,7 +137,7 @@ ul, li {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                margin-left: 60px;
+                margin-left: 10%;
                 color: #FFFFFF;
                 font-weight: 600;
                 font-size: 14px;
@@ -163,7 +170,6 @@ ul, li {
 .banner {
     height: 100vh;
     width: 100%;
-    margin-right: 15px;
     color: #FFFFFF;
     position: relative;
 
@@ -191,20 +197,23 @@ ul, li {
         flex-direction: column;
     }
     .white-line {
-        width: 170px;
+        max-width: 170px;
+        width: 15%;
         border-top: 4px solid #FFFFFF;
-        margin-top: 44px;
+        margin-top: 5%;
     }
     button {
-        height: 80px;
-        width: 370px;
+        max-height: 80px;
+        height: 10vh;
+        max-width: 370px;
+        width: 30%;
         background-color: transparent;
         border: 4px solid #FFFFFF;        
         text-transform: uppercase;
         color: #FFFFFF;
         font-size: 24px;
         font-weight: 700;
-        margin-top: 74px;
+        margin-top: 10px;
         
         &:hover {
             background-color: #FFFFFF;
@@ -220,12 +229,14 @@ ul, li {
         position: absolute;
         left: 0; right: 0; bottom: 0;
         justify-content: space-between;
-        padding: 0 170px;
+        padding: 0 10%;
         text-transform: uppercase;
 
         .slider-1, .slider-2, .slider-3, .slider-4 {
-            min-width: 270px;
-            height: 85px;
+            max-width: 270px;
+            width: 23%;
+            max-height: 85px;
+            height: 10vh;
             @extend %display-flex-center;
             justify-content: flex-start;
             h5 {
@@ -235,7 +246,7 @@ ul, li {
         }
         .slider-1 {
             border-top: 4px solid #FFFFFF;
-            &::before {
+                &::before {
                 content: '';
                 position: absolute;
                 top: 0; 
@@ -253,7 +264,7 @@ ul, li {
 }
 .story-section {
 
-    .story-img {
+    .story-container {
         width: 100%;
         margin-top: 50px;
         margin-bottom: 100px;
@@ -264,7 +275,8 @@ ul, li {
     
     .super-team-1, .super-team-2, .super-team-3 {
         position: relative;
-        width: 370px;
+        max-width: 370px;
+        width: 23%;
         height: 100%;
 
         .button {
@@ -298,7 +310,7 @@ ul, li {
         }
     }
     img {
-        width: 370px;
+        width: 100%;
         height: 100%;
     }
 }
@@ -371,27 +383,35 @@ ul, li {
     }
 
     .devices {
+        width: 100%;
         margin-top: 55px;
         margin-bottom: 57px;
         position: relative;
 
         .tablet-image {
+            height: 93%;
             position: absolute;
             z-index: -1;
-            top: 20px; left: 255px;
+            top: 3%; left: 21.4%;
         }
         .tablet-frame {
+            width: 100%;
             position: relative;
         }
-        .phone-image {
+        .device-phone {
+            height: 50%;
             position: absolute;
-            z-index: 1;
-            top: 215px; right: 208px;
-        }
-        .phone-frame {
-            position: absolute;
-            z-index: 2;
-            top: 210px; right: 200px;
+            top: 40%; right: 34%;
+
+            .phone-image {
+                position: absolute;
+                top: 0; left: 5px;
+                z-index: 1;
+            }
+            .phone-frame {
+                position: absolute;
+                z-index: 2;
+            }
         }
     }
 }
@@ -405,18 +425,24 @@ ul, li {
         width: 100%;
         height: 483px;
 
+        img {
+            max-width: 570px;
+            width: 49%;
+        }
+
             .acor-container {
-                width: 570px;
+                max-width: 570px;
+                width: 49%;
                 height: 100%;  
 
                 .acor-body {
                     width: 100%;
                     height: 0;
                     line-height: 18px;
-                    padding-right: 54px;
+                    padding-right: 8%;
                     transition: padding 0.5s;
                     overflow: auto;
-                    margin-bottom: 22px;
+                    margin-bottom: 5%;
                     transition: .25s;
 
                     h5 {
@@ -432,16 +458,19 @@ ul, li {
                     z-index: 1;
                     border: 1px solid $gray-color;
                     width: 100%;
-                    height: 92px;
+                    height: 17%;
                     font-weight: 700;
                     font-size: 24px;
-                    padding: 12px 20px 12px 10px;
+                    padding: 0 20px 0 10px;
                     transition: color .35s;
 
+                    img {
+                        width: 10%;
+                        height: 60%;
+                    }
                     &::after {
                         content: url(../icons/comment-arrow-left.svg);
                         float: right;
-                        margin-left: 220px;
                         color: $gray-color;
                         transform: rotate(-90deg);
                     }              
@@ -454,7 +483,7 @@ ul, li {
                         transform: rotate(90deg);
                     }
                     &:checked + label + .acor-body {
-                        height: 163px;
+                        height: 36%;
                         border: 17px solid #FFFFFF;
                         outline: 1px solid $gray-color;
                         outline-offset: -1px;
@@ -468,7 +497,7 @@ ul, li {
 .comment, .comment-2 {
     background-color: $white-color;
     display: flex;
-    padding: 42px 170px;
+    padding: 42px 10%;
 
     .comment-box {
         display: flex;
@@ -525,9 +554,12 @@ ul, li {
 
         .our-team-1, .our-team-2, .our-team-3 {
             position: relative;
-            width: 370px;
-            height: 100%;
-    
+            max-width: 370px;
+            width: 33%;
+
+            img {
+                width: 100%;
+            }    
             .button-links {
                 position: absolute;
                 top: -16px; left: -16px; right: 16px; bottom: 16px;
@@ -583,12 +615,14 @@ ul, li {
             "work-1 work-2 work-3 work-4"
             "work-5 work-6 work-3 work-7";
         position: relative;
+        width: 100%;
 
         .work-1, .work-2, .work-3, .work-4, .work-5, .work-6, .work-7 {
             position: relative;
             height: auto;
             
-            img:first-child {
+            img {
+                width: 100%;
                 height: 100%;
             }
             .button-work {
@@ -639,7 +673,7 @@ ul, li {
 }
 .comment-2 {
     background-color: #FFFFFF;
-    padding: 127px 170px;
+    padding: 8% 10%;
 }
 .clients-section {
     position: relative;
@@ -704,12 +738,16 @@ ul, li {
         justify-content: space-between;
 
         .blog {
-            width: 370px;
+            max-width: 370px;
+            width: 33%;
             position: relative;
 
+            img {
+                width: 100%;
+            }
             img:hover {
                 cursor: pointer;
-                transform: scale(1.05);
+                transform: scale(1.02);
                 transition: .35s ease;
             }
             .latest-data {
@@ -750,6 +788,9 @@ ul, li {
                 margin-right: 50px;
                 @extend %display-flex-center;
             }
+            img {
+                width: 10%;
+            }
             img:hover {
                 cursor: pointer;
                 transform: scale(1.2);
@@ -782,10 +823,12 @@ ul, li {
     background-color: $white-color;
     display: flex;
     justify-content: space-between;
-    padding: 42px 170px;
+    padding: 42px 10%;
+    width: 100%;
+    height: 100%;
     
     .logo-footer-section {
-        width: 370px;
+        width: 30%;
 
         > h5 {
             padding: 10px 0;
@@ -877,17 +920,20 @@ ul, li {
         }
     }
     .blogs-section {
-        width: 468px;
+        width: 42%;
         
         h4 {
             padding: 38px 0;
         }
         .blogs {
             display: grid;
-            grid-template-columns: 3fr 5fr;
+            grid-template-columns: 1fr 2fr;
             grid-template-rows: 1fr 1fr 1fr;
             gap: 20px 30px;
 
+            img {
+                width: 100%;
+            }
             .blogs-text {
                 display: flex;
                 flex-direction: column;
@@ -904,16 +950,19 @@ ul, li {
         }
     }
     .instagram-section {
-        width: 270px;
+        width: 25%;
         display: flex;
         flex-direction: column;
 
+        img {
+            width: 100%;
+        }
         h4 {
             padding: 38px 0;
         }
         h6 {
             text-transform: uppercase;
-            padding: 40px 0;
+            padding: 10% 0;
         }
         .instagram {
             display: grid;
@@ -934,5 +983,5 @@ ul, li {
     padding: 20px 0;
     border-top: 1px solid $gray-color;
     @extend %display-flex-center;
-    margin: 0 170px;
+    margin: 0 10%;
 }
