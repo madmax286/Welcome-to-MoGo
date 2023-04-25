@@ -398,6 +398,8 @@ ul, li {
       content: url(../icons/comment-arrow-right.svg);
       position: relative;
       top: 70px; }
+    .comment .comment-box:hover::before, .comment .comment-box:hover::after, .comment-2 .comment-box:hover::before, .comment-2 .comment-box:hover::after {
+      cursor: pointer; }
   .comment .comment-content, .comment-2 .comment-content {
     margin-left: 30px;
     margin-right: 60px; }
@@ -532,6 +534,10 @@ ul, li {
     filter: opacity(10%); }
   .clients-section .client-1, .clients-section .client-2, .clients-section .client-3, .clients-section .client-4 {
     display: flex; }
+    .clients-section .client-1:hover, .clients-section .client-2:hover, .clients-section .client-3:hover, .clients-section .client-4:hover {
+      cursor: pointer;
+      background-color: #C6CBCD;
+      transition: .35s ease; }
     .clients-section .client-1 .red-line, .clients-section .client-2 .red-line, .clients-section .client-3 .red-line, .clients-section .client-4 .red-line {
       width: 70px;
       margin: 30px 0 50px 0;
@@ -557,10 +563,15 @@ ul, li {
   .latest-blog-1 .blog-box .blog {
     width: 370px;
     position: relative; }
+    .latest-blog-1 .blog-box .blog img:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: .35s ease; }
     .latest-blog-1 .blog-box .blog .latest-data {
       position: absolute;
       top: 148px;
       left: -14px;
+      z-index: 1;
       width: 80px;
       height: 80px;
       background-color: #95E1D3;
@@ -584,6 +595,9 @@ ul, li {
     .latest-blog-1 .blog-box .watch-comment h6 {
       margin-left: 18px;
       margin-right: 50px; }
+    .latest-blog-1 .blog-box .watch-comment img:hover {
+      cursor: pointer;
+      transform: scale(1.2); }
 
 .latest-blog-2 {
   position: relative; }
@@ -645,7 +659,8 @@ ul, li {
         font-style: italic;
         color: #C6CBCD; }
       .footer .logo-footer-section .footer-links img:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        transform: scale(1.2); }
     .footer .logo-footer-section form {
       position: relative; }
       .footer .logo-footer-section form input[type="email"] {
@@ -694,6 +709,8 @@ ul, li {
         display: flex;
         flex-direction: column;
         justify-content: space-between; }
+      .footer .blogs-section .blogs .blogs-text:hover, .footer .blogs-section .blogs img:hover {
+        cursor: pointer; }
       .footer .blogs-section .blogs h5 {
         text-transform: uppercase;
         font-weight: 700;
@@ -711,6 +728,10 @@ ul, li {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr; }
+      .footer .instagram-section .instagram img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: .35s ease; }
 
 .footer-h6 {
   font-weight: 700;
