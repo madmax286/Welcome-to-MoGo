@@ -15,7 +15,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway'; 
+    font-family: 'Raleway';
+    font-size: calc((1vw + 1vh)*.64);
 }
 
 $pink-color: #F38281;
@@ -26,8 +27,6 @@ $black-color: #2D3033;
 $white-color: #F8F8F8;
 $white-color-2: #F5F5F5;
 $gray-color: #C6CBCD;
-
-$font-adapt: calc(1vh + 1vw);
 
 %display-flex-center {
     display: flex;
@@ -55,50 +54,55 @@ html {
 h1 {
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: calc($font-adapt*7);
-    line-height: 175.54px;
+    font-size: 9rem;
+    line-height: 10rem;
     text-align: center;
     text-transform: uppercase;
 }
 h2 {
     font-family: 'Kaushan_Script';
     font-weight: 400;
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10vh;
 }
 h3 {
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: 900;
+    font-size: 2.15rem;
     text-transform: uppercase;
-    margin-top: 45px;
+    margin-top: 4.5vh;
 }
 h4 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 h5 {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.155rem;
     text-align: center;
 }
 h6 {
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 400;
 }
 ul, li {
     list-style: none;
 }
 .red-line {
-    width: 170px;
+    max-width: 170px;
+    width: 15%;
     border-top: 4px solid $pink-color;
-    margin: 45px 0;
+    margin: 4.5vh 0;
 }
 .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
-    padding: 0 10%;
+    padding: 0 11%;
     @extend %display-flex-center;
     flex-direction: column;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 2%;
+    }
 }
 .header_navbar {
     background-color: transparent;
@@ -111,45 +115,56 @@ ul, li {
         align-items: center;
         justify-content: space-between;
         background-color: rgba(225, 135, 131, 0.9);
-        height: 100px;
+        max-height: 100px;
+        height: 10vh;
 
         > a {
-            margin-left: 10%;
+            margin-left: 11%;
+
+            @media screen and (max-width: 1024px) {
+                margin-left: 2%;
+            }
         }
     }    
     .navbar_menu {
+        width: 40%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         text-align: center;
-        margin-right: 15%;
+        margin-right: 12%;
 
-        img {
-            margin-left: 10%;
-
-            &:hover {
+        @media screen and (max-width: 1024px) {
+            margin-right: 2%;
+            width: 50%;
+        }
+            img:hover {
                 cursor: pointer;
             }
-        }
+            
             a {
                 text-decoration: none;
-                height: 100px;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin-left: 10%;
+                max-height: 100px;
+                height: 10vh;
+                width: 15%;
+                text-align: center;
+                @extend %display-flex-center;
                 color: #FFFFFF;
                 font-weight: 600;
-                font-size: 14px;
+                font-size: 0.91rem;
                 text-transform: uppercase;
                 transition: all .4s ease-in-out;
                 position: relative;
 
+                @media screen and (max-width: 1024px) {
+                    font-size: 1.2rem;
+                }
                 &::before {
                     content: '';
                     position: absolute;
-                    top: 63px;
-                    width: 85px;
+                    top: 63%;
+                    max-width: 85px;
+                    width: 100%;
                     height: 2px; 
                     background-color: $orange-color;
                     transform-origin: right;
@@ -185,8 +200,9 @@ ul, li {
         background-position: center;
     }
     h2 {
-        font-size: 64px;
+        font-size: 4rem;
         margin-top: 0;
+        margin-bottom: 2%;
     }
     h3 {
         font-weight: 700;
@@ -200,20 +216,20 @@ ul, li {
         max-width: 170px;
         width: 15%;
         border-top: 4px solid #FFFFFF;
-        margin-top: 5%;
+        margin-top: 3%;
     }
     button {
         max-height: 80px;
-        height: 10vh;
+        height: 7.5vh;
         max-width: 370px;
-        width: 30%;
+        width: 30.5vw;
         background-color: transparent;
         border: 4px solid #FFFFFF;        
         text-transform: uppercase;
         color: #FFFFFF;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 700;
-        margin-top: 10px;
+        margin-top: 5%;
         
         &:hover {
             background-color: #FFFFFF;
@@ -229,29 +245,37 @@ ul, li {
         position: absolute;
         left: 0; right: 0; bottom: 0;
         justify-content: space-between;
-        padding: 0 10%;
+        padding: 0 11%;
         text-transform: uppercase;
+
+        @media screen and (max-width: 1024px) {
+            padding: 0;
+            justify-content: space-evenly;
+        }
 
         .slider-1, .slider-2, .slider-3, .slider-4 {
             max-width: 270px;
             width: 23%;
             max-height: 85px;
-            height: 10vh;
+            height: 8.5vh;
             @extend %display-flex-center;
             justify-content: flex-start;
+
             h5 {
-                margin-top: 12px;
-                margin-left: 5px;
+                margin-top: 2%;
+                margin-left: 2%;
             }
         }
         .slider-1 {
             border-top: 4px solid #FFFFFF;
+            position: relative;
+
                 &::before {
                 content: '';
                 position: absolute;
-                top: 0; 
-                left: 170px;
-                width: 70px;
+                top: -4px; left: 0;
+                max-width: 70px;
+                width: 27%;
                 border-top: 4px solid $pink-color;
             }
         }
@@ -266,52 +290,60 @@ ul, li {
 
     .story-container {
         width: 100%;
-        margin-top: 50px;
-        margin-bottom: 100px;
+        margin-top: 8vh;
+        margin-bottom: 10vh;
         @extend %display-flex-center;
         justify-content: space-between;
         position: relative;
-    }
-    
-    .super-team-1, .super-team-2, .super-team-3 {
-        position: relative;
-        max-width: 370px;
-        width: 23%;
-        height: 100%;
 
-        .button {
-            position: absolute;
-            top: -16px; left: -16px; right: 16px; bottom: 16px;
-            background-image: linear-gradient(360deg, rgba(237, 215, 137, 0.9), rgba(233, 130, 131, 0.9));
-            opacity: 0;
-            transition: all .4s ease-in-out;
+        @media screen and (max-width: 1024px) {
+            margin-top: 9vh;
+            margin-bottom: 8vh;
+        }
+        img {
+            width: 100%;
+        }        
+        .super-team-1, .super-team-2, .super-team-3 {
+            position: relative;
+            max-width: 370px;
+            width: 32%;
 
-            &:hover {
-                cursor: pointer;
-                opacity: 1;
+            .hover-team {
+                position: absolute;
+                top: -16px; left: -16px; right: 16px; bottom: 16px;
+                background-image: linear-gradient(360deg, rgba(237, 215, 137, 0.9), rgba(233, 130, 131, 0.9));
+                opacity: 0;
+                transition: all .4s ease-in-out;
+
+                @media screen and (max-width: 1024px) {
+                    top: -6px; left: -6px; right: 6px; bottom: 6px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    opacity: 1;
+                }
+            }
+            .hover-team img {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                left: 45%;
+                top: 35%;
+            }
+            h4 {
+                font-weight: 500;
+                position: absolute;
+                width: 100%;
+                top: 55%; left: 0;
+                text-align: center;
+                text-transform: uppercase;
+                color: white;
+
+                @media screen and (max-width: 1024px) {
+                    font-size: 1.65rem;
+                }
             }
         }
-        .button img {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            left: 45%;
-            top: 35%;
-        }
-        h4 {
-            font-weight: 500;
-            position: absolute;
-            width: 100%;
-            top: 55%;
-            left: 0;
-            text-align: center;
-            text-transform: uppercase;
-            color: white;
-        }
-    }
-    img {
-        width: 100%;
-        height: 100%;
     }
 }
 .number-section {
@@ -329,28 +361,32 @@ ul, li {
             border-left: 1px solid #FFFFFF;
         }
         h3 {
-            font-size: 64px;
+            font-size: 4rem;
             font-weight: 700;
         }
         h4 {
             font-weight: 400;
             text-transform: none;
-            margin-top: 20px;
-            margin-bottom: 50px;
+            margin-top: 2vh;
+            margin-bottom: 5vh;
         }
     }
 }
 .worck-service-section {
 
     .service-content {
-        margin-top: 80px;
-        margin-bottom: 90px;
+        margin-top: 8vh;
+        margin-bottom: 9vh;
         display: grid;
         justify-content: space-between;
-        row-gap: 148px;
+        row-gap: 14vh;
         grid-template-columns: repeat(3, 32%);
         grid-template-rows: 1fr 1fr;
-
+        
+        @media screen and (max-width: 1024px) {
+            row-gap: 7vh;
+        }
+   
         h5 {
             text-align: start;
             margin-top: 30px;
@@ -362,8 +398,8 @@ ul, li {
                 margin-left: 20px;
             }
             img {
-                width: 20%;
-                height: 50%;
+                width: 5vw;
+                height: 7vh;
             }
         }
 }
@@ -384,8 +420,8 @@ ul, li {
 
     .devices {
         width: 100%;
-        margin-top: 55px;
-        margin-bottom: 57px;
+        margin-top: 5vh;
+        margin-bottom: 6vh;
         position: relative;
 
         .tablet-image {
@@ -418,27 +454,27 @@ ul, li {
 .service-section {
 
     .service-box {
-        margin-top: 80px;
-        margin-bottom: 114px;
+        margin-top: 8vh;
+        margin-bottom: 11vh;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: 483px;
 
         img {
             max-width: 570px;
             width: 49%;
+            height: 100%;
         }
 
             .acor-container {
                 max-width: 570px;
                 width: 49%;
-                height: 100%;  
+                min-height: 100%;  
 
                 .acor-body {
                     width: 100%;
                     height: 0;
-                    line-height: 18px;
+                    line-height: 1.125rem;
                     padding-right: 8%;
                     transition: padding 0.5s;
                     overflow: auto;
@@ -447,7 +483,11 @@ ul, li {
 
                     h5 {
                         text-align: start;
-                        line-height: 21.13px;
+                        line-height: 1.4rem;
+
+                        @media screen and (max-width: 1024px) {
+                            font-size: 1.3rem;
+                        }
                     }
                 }
                 label {
@@ -458,9 +498,9 @@ ul, li {
                     z-index: 1;
                     border: 1px solid $gray-color;
                     width: 100%;
-                    height: 17%;
+                    height: 15%;
                     font-weight: 700;
-                    font-size: 24px;
+                    font-size: 1.5rem;
                     padding: 0 20px 0 10px;
                     transition: color .35s;
 
@@ -483,8 +523,8 @@ ul, li {
                         transform: rotate(90deg);
                     }
                     &:checked + label + .acor-body {
-                        height: 36%;
-                        border: 17px solid #FFFFFF;
+                        height: 20vh;
+                        border: 1.7vh solid #FFFFFF;
                         outline: 1px solid $gray-color;
                         outline-offset: -1px;
                         box-sizing: border-box;
@@ -497,24 +537,28 @@ ul, li {
 .comment, .comment-2 {
     background-color: $white-color;
     display: flex;
-    padding: 42px 10%;
-
+    padding: 4vh 11%;
+    
+    @media screen and (max-width: 1024px) {
+        padding: 4vh 4%;
+    }
     .comment-box {
         display: flex;
         position: relative;
 
         img {
-            margin-left: 45px;
+            width: 10vw;
+            margin-left: 4vw;
         }
         &::before {
             content: url(../icons/comment-arrow-left.svg);
             position: relative;
-            top: 70px;
+            top: 6vh;
         }
         &::after {
             content: url(../icons/comment-arrow-right.svg);
             position: relative;
-            top: 70px;
+            top: 6vh;
         }
         &:hover::before, &:hover::after {
             cursor: pointer;
@@ -535,8 +579,9 @@ ul, li {
         margin-bottom: 25px;
     }
     .red-line {
-        width: 70px;
-        margin: 0 56px 0 0;
+        max-width: 70px;
+        width: 4.6vw;
+        margin: 0 3.7vw 0 0;
     }
     .red-line-name {
         display: flex;
@@ -547,20 +592,22 @@ ul, li {
 
     .team-box {
         width: 100%;
-        margin-top: 50px;
-        margin-bottom: 100px;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
         @extend %display-flex-center;
         justify-content: space-between;
 
-        .our-team-1, .our-team-2, .our-team-3 {
+        .team-1, .team-2, .team-3 {
             position: relative;
             max-width: 370px;
-            width: 33%;
-
-            img {
+            width: 32%;
+        }
+            .our-team-1, .our-team-2, .our-team-3 {
+                position: relative;
+            > img {
                 width: 100%;
             }    
-            .button-links {
+            .hover-links {
                 position: absolute;
                 top: -16px; left: -16px; right: 16px; bottom: 16px;
                 background-image: linear-gradient(360deg, rgba(237, 215, 137, 0.9), rgba(233, 130, 131, 0.9));
@@ -585,7 +632,7 @@ ul, li {
                 .facebook-icon {
                     background-color: $pink-color;
                 }
-            }
+            }        
         }
         h4, h5 {
             text-transform: uppercase;
@@ -598,8 +645,14 @@ ul, li {
     flex-direction: row;
     justify-content: space-between;
     background-color: $white-color;
-    height: 211px;
+    max-height: 211px;
 
+    img {
+        width: calc(100% / 7);
+    }
+    img:nth-child(3), img:nth-child(4), img:nth-child(5) {
+        margin: 28px;
+    }
     img:hover {
         cursor: pointer;
         transform: scale(1.1);
@@ -639,8 +692,8 @@ ul, li {
                     height: 42px;
                 }
                 h4 {
-                    margin-top: 60px;
-                    margin-bottom: 20px;
+                    margin-top: 20%;
+                    margin-bottom: 5%;
                 }
                 &:hover {
                     opacity: 1;
@@ -679,11 +732,11 @@ ul, li {
     position: relative;
 
     .clients-box {
-        margin-top: 80px;
-        margin-bottom: 90px;
+        margin-top: 8vh;
+        margin-bottom: 9vh;
         display: grid;
         justify-content: space-between;
-        gap: 40px 50px;
+        gap: 6% 3%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
@@ -706,8 +759,9 @@ ul, li {
             transition: .35s ease;
         }
         .red-line {
-            width: 70px;
-            margin: 30px 0 50px 0;
+            max-width: 70px;
+            width: 4.6vw;
+            margin: 3vh 0 5vh 0;
             justify-self: flex-start;
         }
         h5 {
@@ -716,14 +770,15 @@ ul, li {
             margin-top: 10px;
         }
         h6 {
-            font-size: 18px;
+            font-size: 1.16rem;
         }
-        div {
-            margin-left: 50px;
+        .client-comment {
+            margin-left: 5vw;
         }
         img {
-            width: 130px;
-            height: 130px;
+            align-self: start;
+            max-width: 130px;
+            width: 10vw;
             margin-left: 20px;
         }
     }
@@ -732,14 +787,15 @@ ul, li {
 
     .blog-box {
         width: 100%;
-        margin-top: 42px;
-        margin-bottom: 80px;
+        margin-top: 4vh;
+        margin-bottom: 8vh;
         @extend %display-flex-center;
         justify-content: space-between;
 
         .blog {
             max-width: 370px;
-            width: 33%;
+            width: 32%;
+            height: 100%;
             position: relative;
 
             img {
@@ -750,12 +806,14 @@ ul, li {
                 transform: scale(1.02);
                 transition: .35s ease;
             }
+            div {
+                position: relative;
             .latest-data {
                 position: absolute;
-                top: 148px; left: -14px;
+                top: 55%; left: -3%;
                 z-index: 1;
-                width: 80px;
-                height: 80px;
+                width: calc((1vw + 1vh)*3.2);
+                height: calc((1vw + 1vh)*3.2);
                 background-color: $light-green-color;
                 color: #FFFFFF;
                 @extend %display-flex-center;
@@ -771,6 +829,7 @@ ul, li {
                     text-transform: uppercase;
                 }
             }
+        }
         }
         h4, h5 {
             text-align: start;
@@ -789,7 +848,7 @@ ul, li {
                 @extend %display-flex-center;
             }
             img {
-                width: 10%;
+                width: 6%;
             }
             img:hover {
                 cursor: pointer;
@@ -802,7 +861,7 @@ ul, li {
     position: relative;
 
     img {
-        margin-top: 46px;
+        margin-top: 4vh;
     }
     h3 {
         margin-top: 20px;
@@ -823,9 +882,12 @@ ul, li {
     background-color: $white-color;
     display: flex;
     justify-content: space-between;
-    padding: 42px 10%;
+    padding: 42px 11%;
     width: 100%;
-    height: 100%;
+
+    @media screen and (max-width: 1024px) {
+        padding: 5vh 2%;
+    }
     
     .logo-footer-section {
         width: 30%;
@@ -866,6 +928,10 @@ ul, li {
                 width: 70%;
                 display: flex;
                 justify-content: space-between;
+
+                img {
+                    width: calc(100%/10);
+                }    
             }
             h6 {
                 font-style: italic;
@@ -883,16 +949,17 @@ ul, li {
                 outline: none;
                 border: 1px solid $gray-color;
                 width: 100%;
-                height: 55px;
+                max-height: 55px;
+                height: 5.5vh;
                 background: #fff;
-                font-size: 18px;
+                font-size: 1.14rem;
                 padding-right: 35%;
                 text-align: center;
 
                 &::placeholder {
                     color: $gray-color;
                     font-family: 'Raleway';
-                    font-size: 18px;
+                    font-size: 1.14rem;
                     text-align: center;
                 }                
             }
@@ -907,7 +974,7 @@ ul, li {
                 color: #fff;
                 text-transform: uppercase;
                 font-weight: 700;
-                font-size: 18px;
+                font-size: 1.14rem;
                 cursor: pointer;
 
                 &:hover {
@@ -929,7 +996,7 @@ ul, li {
             display: grid;
             grid-template-columns: 1fr 2fr;
             grid-template-rows: 1fr 1fr 1fr;
-            gap: 20px 30px;
+            gap: 4%;
 
             img {
                 width: 100%;
