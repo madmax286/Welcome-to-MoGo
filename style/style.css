@@ -19,7 +19,7 @@
   font-size: calc((1vw + 1vh) * 0.64);
 }
 
-.footer-h6, .latest-blog-1 .blog-box .watch-comment h6, .latest-blog-1 .blog-box .blog div .latest-data, .latest-blog-1 .blog-box, .some-work-section .some-work .work-1 .button-work, .some-work-section .some-work .work-2 .button-work, .some-work-section .some-work .work-3 .button-work, .some-work-section .some-work .work-4 .button-work, .some-work-section .some-work .work-5 .button-work, .some-work-section .some-work .work-6 .button-work, .some-work-section .some-work .work-7 .button-work, .our-team-section .team-box .our-team-1 .hover-links .facebook-icon, .our-team-section .team-box .our-team-1 .hover-links .twitter-icon, .our-team-section .team-box .our-team-1 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-1 .hover-links .instagram-icon, .our-team-section .team-box .our-team-2 .hover-links .facebook-icon, .our-team-section .team-box .our-team-2 .hover-links .twitter-icon, .our-team-section .team-box .our-team-2 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-2 .hover-links .instagram-icon, .our-team-section .team-box .our-team-3 .hover-links .facebook-icon, .our-team-section .team-box .our-team-3 .hover-links .twitter-icon, .our-team-section .team-box .our-team-3 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-3 .hover-links .instagram-icon, .our-team-section .team-box .our-team-1 .hover-links, .our-team-section .team-box .our-team-2 .hover-links, .our-team-section .team-box .our-team-3 .hover-links, .our-team-section .team-box, .service-section .service-box .acor-container label, .number-section div, .story-section .story-container, .banner .banner-slider .slider-1, .banner .banner-slider .slider-2, .banner .banner-slider .slider-3, .banner .banner-slider .slider-4, .banner .banner-slider, .banner .banner-content, .header_navbar .navbar_menu a, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
+.footer-h6, .latest-blog-1 .blog-box .watch-comment h6, .latest-blog-1 .blog-box .blog div .latest-data, .latest-blog-1 .blog-box, .some-work-section .some-work .work-1 .button-work, .some-work-section .some-work .work-2 .button-work, .some-work-section .some-work .work-3 .button-work, .some-work-section .some-work .work-4 .button-work, .some-work-section .some-work .work-5 .button-work, .some-work-section .some-work .work-6 .button-work, .some-work-section .some-work .work-7 .button-work, .our-team-section .team-box .our-team-1 .hover-links .facebook-icon, .our-team-section .team-box .our-team-1 .hover-links .twitter-icon, .our-team-section .team-box .our-team-1 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-1 .hover-links .instagram-icon, .our-team-section .team-box .our-team-2 .hover-links .facebook-icon, .our-team-section .team-box .our-team-2 .hover-links .twitter-icon, .our-team-section .team-box .our-team-2 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-2 .hover-links .instagram-icon, .our-team-section .team-box .our-team-3 .hover-links .facebook-icon, .our-team-section .team-box .our-team-3 .hover-links .twitter-icon, .our-team-section .team-box .our-team-3 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-3 .hover-links .instagram-icon, .our-team-section .team-box .our-team-1 .hover-links, .our-team-section .team-box .our-team-2 .hover-links, .our-team-section .team-box .our-team-3 .hover-links, .our-team-section .team-box, .service-section .service-box .acor-container .acor1-1 label, .number-section div, .story-section .story-container, .banner .banner-slider .slider-1, .banner .banner-slider .slider-2, .banner .banner-slider .slider-3, .banner .banner-slider .slider-4, .banner .banner-slider, .banner .banner-content, .header_navbar .navbar_menu a, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -440,15 +440,19 @@ ul, li {
   position: relative;
 }
 .unique-section .devices .device-phone {
-  height: 50%;
+  width: 20%;
   position: absolute;
-  top: 40%;
-  right: 34%;
+  top: 38%;
+  right: 14%;
+}
+.unique-section .devices .device-phone img {
+  width: 100%;
 }
 .unique-section .devices .device-phone .phone-image {
+  width: 95%;
   position: absolute;
   top: 0;
-  left: 5px;
+  left: 1%;
   z-index: 1;
 }
 .unique-section .devices .device-phone .phone-frame {
@@ -462,6 +466,7 @@ ul, li {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 .service-section .service-box img {
   max-width: 570px;
@@ -471,64 +476,75 @@ ul, li {
 .service-section .service-box .acor-container {
   max-width: 570px;
   width: 49%;
-  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.service-section .service-box .acor-container .acor-body {
+.service-section .service-box .acor-container .acor1-1 input {
+  display: none;
+}
+.service-section .service-box .acor-container .acor1-1 input:checked + label::after {
+  transition: transform 0.35s;
+  transform: rotate(90deg);
+}
+.service-section .service-box .acor-container .acor1-1 input:checked + label + .acor-body {
+  height: calc((1vh + 1vw) * 7.2);
+  border: 1.7vh solid #FFFFFF;
+  outline: 1px solid #C6CBCD;
+  outline-offset: -1px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+@media screen and (max-width: 1024px) {
+  .service-section .service-box .acor-container .acor1-1 input:checked + label + .acor-body {
+    height: calc((1vh + 1vw) * 8);
+  }
+}
+.service-section .service-box .acor-container .acor1-1 .acor-body {
   width: 100%;
   height: 0;
   line-height: 1.125rem;
   padding-right: 8%;
   transition: padding 0.5s;
   overflow: auto;
-  margin-bottom: 5%;
   transition: 0.25s;
 }
-.service-section .service-box .acor-container .acor-body h5 {
+.service-section .service-box .acor-container .acor1-1 .acor-body h5 {
   text-align: start;
   line-height: 1.4rem;
 }
 @media screen and (max-width: 1024px) {
-  .service-section .service-box .acor-container .acor-body h5 {
+  .service-section .service-box .acor-container .acor1-1 .acor-body h5 {
     font-size: 1.3rem;
   }
 }
-.service-section .service-box .acor-container label {
+.service-section .service-box .acor-container .acor1-1 label {
   cursor: pointer;
   text-transform: uppercase;
   justify-content: space-between;
   z-index: 1;
   border: 1px solid #C6CBCD;
   width: 100%;
-  height: 15%;
+  height: calc((1vh + 1vw) * 2.9);
   font-weight: 700;
   font-size: 1.5rem;
   padding: 0 20px 0 10px;
   transition: color 0.35s;
 }
-.service-section .service-box .acor-container label img {
+@media screen and (max-width: 1024px) {
+  .service-section .service-box .acor-container .acor1-1 label {
+    height: calc((1vh + 1vw) * 3.2);
+  }
+}
+.service-section .service-box .acor-container .acor1-1 label img {
   width: 10%;
   height: 60%;
 }
-.service-section .service-box .acor-container label::after {
+.service-section .service-box .acor-container .acor1-1 label::after {
   content: url(../icons/comment-arrow-left.svg);
   float: right;
   color: #C6CBCD;
   transform: rotate(-90deg);
-}
-.service-section .service-box .acor-container input {
-  display: none;
-}
-.service-section .service-box .acor-container input:checked + label::after {
-  transition: transform 0.35s;
-  transform: rotate(90deg);
-}
-.service-section .service-box .acor-container input:checked + label + .acor-body {
-  height: 20vh;
-  border: 1.7vh solid #FFFFFF;
-  outline: 1px solid #C6CBCD;
-  outline-offset: -1px;
-  box-sizing: border-box;
-  overflow: auto;
 }
 
 .comment, .comment-2 {
@@ -639,12 +655,13 @@ ul, li {
   justify-content: space-between;
   background-color: #F8F8F8;
   max-height: 211px;
+  padding: 2%;
 }
 .partner-section img {
   width: 14.2857142857%;
 }
 .partner-section img:nth-child(3), .partner-section img:nth-child(4), .partner-section img:nth-child(5) {
-  margin: 28px;
+  padding: 3%;
 }
 .partner-section img:hover {
   cursor: pointer;
@@ -878,6 +895,9 @@ ul, li {
 }
 .footer .logo-footer-section {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .footer .logo-footer-section > h5 {
   padding: 10px 0;
@@ -907,8 +927,8 @@ ul, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-top: 2%;
+  margin-bottom: 12%;
 }
 .footer .logo-footer-section .footer-links .links {
   width: 70%;
@@ -938,6 +958,12 @@ ul, li {
   background: #fff;
   font-size: 1.14rem;
   padding-right: 35%;
+  text-align: center;
+}
+.footer .logo-footer-section form input[type=email]::-moz-placeholder {
+  color: #C6CBCD;
+  font-family: "Raleway";
+  font-size: 1.14rem;
   text-align: center;
 }
 .footer .logo-footer-section form input[type=email]::placeholder {
@@ -978,7 +1004,7 @@ ul, li {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 4%;
+  gap: 11% 3%;
 }
 .footer .blogs-section .blogs img {
   width: 100%;
@@ -1007,9 +1033,10 @@ ul, li {
 .footer .instagram-section h4 {
   padding: 38px 0;
 }
-.footer .instagram-section h6 {
+.footer .instagram-section a {
   text-transform: uppercase;
   padding: 10% 0;
+  color: black;
 }
 .footer .instagram-section .instagram {
   display: grid;
@@ -1028,4 +1055,4 @@ ul, li {
   padding: 20px 0;
   border-top: 1px solid #C6CBCD;
   margin: 0 10%;
-}
+}/*# sourceMappingURL=style.css.map */
