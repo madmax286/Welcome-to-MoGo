@@ -340,6 +340,10 @@ ul, li {
             &.active {
                 transform: translateY(0);
             }
+            &.close {
+                transform: translateY(-100%);
+            }
+
         }
     }    
 }

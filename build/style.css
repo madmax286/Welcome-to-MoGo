@@ -279,6 +279,8 @@ ul, li {
             color: #F4BF87; }
       .header_navbar .navbar .header_menu.active {
         transform: translateY(0); }
+      .header_navbar .navbar .header_menu.close {
+        transform: translateY(-100%); }
 
 .banner {
   height: 100vh;
