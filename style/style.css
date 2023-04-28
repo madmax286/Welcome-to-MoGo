@@ -403,8 +403,8 @@ ul, li {
   }
 }
 .banner button {
-  max-height: 80px;
-  min-height: 57px;
+  height: 7.5vh;
+  min-height: 77px;
   max-width: 370px;
   width: 30.5vw;
   background-color: transparent;
@@ -669,6 +669,7 @@ ul, li {
 @media (max-width: 1024px) {
   .worck-service-section .service-content {
     row-gap: 7vh;
+    margin-top: 0;
   }
 }
 @media (max-width: 767.98px) {
@@ -752,14 +753,8 @@ ul, li {
 }
 .unique-section .devices {
   width: 100%;
-  margin-top: 5vh;
   margin-bottom: 6vh;
   position: relative;
-}
-@media (max-width: 767.98px) {
-  .unique-section .devices {
-    margin-top: 0;
-  }
 }
 .unique-section .devices .tablet-image {
   height: 93%;
@@ -1029,8 +1024,8 @@ ul, li {
 }
 @media (max-width: 575.98px) {
   .comment .pagination div, .comment-2 .pagination div {
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     border: 1px solid #C6CBCD;
     border-radius: 50%;
     display: inline-flex;

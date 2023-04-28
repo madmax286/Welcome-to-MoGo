@@ -392,9 +392,8 @@ ul, li {
         }
     }
     button {
-        max-height: 80px;
-        // height: 7.5vh;
-        min-height: 57px;
+        height: 7.5vh;
+        min-height: 77px;
         max-width: 370px;
         width: 30.5vw;
         background-color: transparent;
@@ -405,7 +404,6 @@ ul, li {
         font-weight: 700;
 
         @media (max-width: 767px) {
-            // min-width: 100%;
             width: 50vw;
             font-size: 2.5rem;
         }
@@ -637,6 +635,7 @@ ul, li {
         
         @media (max-width: 1024px) {
             row-gap: 7vh;
+            margin-top: 0;
         }
         @media (max-width: 767.98px) {
             grid-template-columns: repeat(2, 49%);
@@ -706,13 +705,8 @@ ul, li {
 
     .devices {
         width: 100%;
-        margin-top: 5vh;
         margin-bottom: 6vh;
         position: relative;
-
-        @media (max-width: 767.98px) {
-            margin-top: 0;
-        }
 
         .tablet-image {
             height: 93%;
@@ -972,8 +966,8 @@ ul, li {
     .pagination {
         div {
             @media (max-width: 575.98px) {
-                width: 9px;
-                height: 9px;
+                width: 10px;
+                height: 10px;
                 border: 1px solid $gray-color;
                 border-radius: 50%;
                 display: inline-flex;
