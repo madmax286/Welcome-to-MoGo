@@ -115,7 +115,7 @@ ul, li {
         width: 45%;
     }
 }
-.banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
+.navbar, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
     padding: 0 11%;
     @extend %display-flex-center;
     flex-direction: column;
@@ -135,78 +135,201 @@ ul, li {
     z-index: 5;
 
     .navbar {
-        display: flex;
-        align-items: center;
+        flex-direction: row;
         justify-content: space-between;
         background-color: rgba(225, 135, 131, 0.9);
         max-height: 100px;
         height: 10vh;
-
-        > a {
-            margin-left: 11%;
+        position: relative;
+        
+        .logo {
+            width: 6.5vw;
 
             @media (max-width: 1024px) {
-                margin-left: 2%;
+                width: 10vw;
             }
+            @media (max-width: 767.98px) {
+                width: 17vw;
+            }     
         }
-    }    
-    .navbar_menu {
-        width: 40%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: center;
-        margin-right: 12%;
+        .navbar_menu {
+            width: 55%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+    
+                @media (max-width: 1024px) {
+                    margin-right: 2%;
+                    width: 50%;
+                }
+                @media (max-width: 767px) {
+                    display: none;
+                }
+                img:hover {
+                    cursor: pointer;
+                }
+                
+                a {
+                    text-decoration: none;
+                    max-height: 100px;
+                    height: 10vh;
+                    width: 15%;
+                    text-align: center;
+                    @extend %display-flex-center;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                    font-size: 0.91rem;
+                    text-transform: uppercase;
+                    transition: all .4s ease-in-out;
+                    position: relative;
+    
+                    @media (max-width: 1024px) {
+                        font-size: 1.2rem;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 63%;
+                        max-width: 85px;
+                        width: 100%;
+                        height: 2px; 
+                        background-color: $orange-color;
+                        transform-origin: right;
+                        transform: scale(0);
+                        transition: transform .5s;                    
+                    }
+                    &:hover::before {
+                        transform-origin: left;
+                        transform: scale(1);
+                    }
+                    &:hover {
+                        color: $orange-color;
+                    }    
+                }    
+            
+        }
+        .burger-btn {
+            display: flex;
+            position: absolute;
+            top: 0; right: 5%;
+            width: 10vw;
+            height: 10vh;
 
-        @media (max-width: 1024px) {
-            margin-right: 2%;
-            width: 50%;
-        }
-        @media (max-width: 767px) {
-            display: none;
-        }
-            img:hover {
+            &:hover {
                 cursor: pointer;
             }
             
-            a {
-                text-decoration: none;
-                max-height: 100px;
-                height: 10vh;
-                width: 15%;
-                text-align: center;
-                @extend %display-flex-center;
-                color: #FFFFFF;
-                font-weight: 600;
-                font-size: 0.91rem;
-                text-transform: uppercase;
-                transition: all .4s ease-in-out;
-                position: relative;
+            &.active span:nth-of-type(1) {
+                display: none;
+            }
+            &.active span:nth-of-type(2) {
+                top: 50%;
+                transform: translate(-50%, 8px) rotate(45deg);  
+            }
+            &.active span:nth-of-type(3) {
+                top: 50%;
+                transform: translate(-50%, -8px) rotate(-45deg); 
+            }
 
-                @media (max-width: 1024px) {
-                    font-size: 1.2rem;
-                }
-                &::before {
-                    content: '';
+            .menu-btn {
+                width: 100%;
+                height: 100%;
+                z-index:2;
+                overflow: hidden;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+
+                span {
+                    width: 24px;
+                    height: 3px;
                     position: absolute;
-                    top: 63%;
-                    max-width: 85px;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #fff;
+                    transition: all 0.5s;
+
+                    &:nth-of-type(2) {
+                        top: calc(50% - 8px);
+                    }
+                    &:nth-of-type(3) {
+                        top: calc(50% + 8px);
+                    }
+                }
+            }
+            @media (min-width: 767.98px) {
+                display: none;
+            }      
+        }
+
+        .header_menu {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10vh 6%;
+            background: 
+                linear-gradient(360deg, rgba(237, 215, 137, 0.9), rgba(233, 130, 131, 0.9)),
+                url(../img/eagle.svg);
+            background-size: cover;
+            background-position: center;
+            transform: translateY(-100%);
+            transition: transform 0.5s;
+
+            .logo {
+                position: absolute;
+                top: 3vh;
+                width: 17vw;
+            }
+
+            .header_list {
+                @extend %display-flex-center;
+                flex-direction: column;
+
+                li {
+                    margin-top: 4%;
+                    height: 10vh;
                     width: 100%;
-                    height: 2px; 
-                    background-color: $orange-color;
-                    transform-origin: right;
-                    transform: scale(0);
-                    transition: transform .5s;                    
+                    position: relative;
+                    @extend %display-flex-center;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 25%; left: calc(50% - 10vw);
+                        width: 20vw;
+                        height: 2px; 
+                        background-color: $orange-color;
+                        transform-origin: right;
+                        transform: scale(0);
+                        transition: transform .5s;                    
+                    }
+                    &:hover::before {
+                        transform-origin: left;
+                        transform: scale(1);
+                    }
                 }
-                &:hover::before {
-                    transform-origin: left;
-                    transform: scale(1);
-                }
-                &:hover {
-                    color: $orange-color;
+                .header_link {
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    font-size: calc((1vh + 1vw)*1.4);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    width: 100%;
+                    height: 100%;
+                    @extend %display-flex-center;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $orange-color;
+                    }  
                 }    
-            }    
-        
+            }
+            &.active {
+                transform: translateY(0);
+            }
+        }
     }    
 }
 .banner {

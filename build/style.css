@@ -18,7 +18,7 @@
   font-family: 'Raleway';
   font-size: calc((1vw + 1vh)*.64); }
 
-.banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2, .header_navbar .navbar_menu a, .banner .banner-content, .banner .banner-slider, .banner .banner-slider .slider-1, .banner .banner-slider .slider-2, .banner .banner-slider .slider-3, .banner .banner-slider .slider-4, .story-section .story-container, .number-section .number, .service-section .service-box .acor-container .acor1-1 label, .our-team-section .team-box, .our-team-section .team-box .our-team-1 .hover-links, .our-team-section .team-box .our-team-2 .hover-links, .our-team-section .team-box .our-team-3 .hover-links, .our-team-section .team-box .our-team-1 .hover-links .facebook-icon, .our-team-section .team-box .our-team-1 .hover-links .twitter-icon, .our-team-section .team-box .our-team-1 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-1 .hover-links .instagram-icon, .our-team-section .team-box .our-team-2 .hover-links .facebook-icon, .our-team-section .team-box .our-team-2 .hover-links .twitter-icon, .our-team-section .team-box .our-team-2 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-2 .hover-links .instagram-icon, .our-team-section .team-box .our-team-3 .hover-links .facebook-icon, .our-team-section .team-box .our-team-3 .hover-links .twitter-icon, .our-team-section .team-box .our-team-3 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-3 .hover-links .instagram-icon, .some-work-section .some-work .work-1 .hover-work, .some-work-section .some-work .work-2 .hover-work, .some-work-section .some-work .work-3 .hover-work, .some-work-section .some-work .work-4 .hover-work, .some-work-section .some-work .work-5 .hover-work, .some-work-section .some-work .work-6 .hover-work, .some-work-section .some-work .work-7 .hover-work, .latest-blog-1 .blog-box, .latest-blog-1 .blog-box .blog div .latest-data, .latest-blog-1 .blog-box .watch-comment h6, .footer-h6 {
+.navbar, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2, .header_navbar .navbar .navbar_menu a, .header_navbar .navbar .header_menu .header_list, .header_navbar .navbar .header_menu .header_list li, .header_navbar .navbar .header_menu .header_list .header_link, .banner .banner-content, .banner .banner-slider, .banner .banner-slider .slider-1, .banner .banner-slider .slider-2, .banner .banner-slider .slider-3, .banner .banner-slider .slider-4, .story-section .story-container, .number-section .number, .service-section .service-box .acor-container .acor1-1 label, .our-team-section .team-box, .our-team-section .team-box .our-team-1 .hover-links, .our-team-section .team-box .our-team-2 .hover-links, .our-team-section .team-box .our-team-3 .hover-links, .our-team-section .team-box .our-team-1 .hover-links .facebook-icon, .our-team-section .team-box .our-team-1 .hover-links .twitter-icon, .our-team-section .team-box .our-team-1 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-1 .hover-links .instagram-icon, .our-team-section .team-box .our-team-2 .hover-links .facebook-icon, .our-team-section .team-box .our-team-2 .hover-links .twitter-icon, .our-team-section .team-box .our-team-2 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-2 .hover-links .instagram-icon, .our-team-section .team-box .our-team-3 .hover-links .facebook-icon, .our-team-section .team-box .our-team-3 .hover-links .twitter-icon, .our-team-section .team-box .our-team-3 .hover-links .pinterest-icon, .our-team-section .team-box .our-team-3 .hover-links .instagram-icon, .some-work-section .some-work .work-1 .hover-work, .some-work-section .some-work .work-2 .hover-work, .some-work-section .some-work .work-3 .hover-work, .some-work-section .some-work .work-4 .hover-work, .some-work-section .some-work .work-5 .hover-work, .some-work-section .some-work .work-6 .hover-work, .some-work-section .some-work .work-7 .hover-work, .latest-blog-1 .blog-box, .latest-blog-1 .blog-box .blog div .latest-data, .latest-blog-1 .blog-box .watch-comment h6, .footer-h6 {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -100,14 +100,14 @@ ul, li {
     .red-line {
       width: 45%; } }
 
-.banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
+.navbar, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
   padding: 0 11%;
   flex-direction: column; }
   @media (max-width: 1024px) {
-    .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
+    .navbar, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
       padding: 0 2%; } }
   @media (max-width: 767.98px) {
-    .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
+    .navbar, .banner, .story-section, .number-section, .worck-service-section, .unique-section, .service-section, .our-team-section, .partner-section, .some-work-head, .clients-section, .latest-blog-1, .latest-blog-2 {
       padding: 0 5%; } }
 
 .header_navbar {
@@ -118,64 +118,158 @@ ul, li {
   right: 0;
   z-index: 5; }
   .header_navbar .navbar {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
     background-color: rgba(225, 135, 131, 0.9);
     max-height: 100px;
-    height: 10vh; }
-    .header_navbar .navbar > a {
-      margin-left: 11%; }
+    height: 10vh;
+    position: relative; }
+    .header_navbar .navbar .logo {
+      width: 6.5vw; }
       @media (max-width: 1024px) {
-        .header_navbar .navbar > a {
-          margin-left: 2%; } }
-  .header_navbar .navbar_menu {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    margin-right: 12%; }
-    @media (max-width: 1024px) {
-      .header_navbar .navbar_menu {
-        margin-right: 2%;
-        width: 50%; } }
-    @media (max-width: 767px) {
-      .header_navbar .navbar_menu {
-        display: none; } }
-    .header_navbar .navbar_menu img:hover {
-      cursor: pointer; }
-    .header_navbar .navbar_menu a {
-      text-decoration: none;
-      max-height: 100px;
-      height: 10vh;
-      width: 15%;
-      text-align: center;
-      color: #FFFFFF;
-      font-weight: 600;
-      font-size: 0.91rem;
-      text-transform: uppercase;
-      transition: all .4s ease-in-out;
-      position: relative; }
+        .header_navbar .navbar .logo {
+          width: 10vw; } }
+      @media (max-width: 767.98px) {
+        .header_navbar .navbar .logo {
+          width: 17vw; } }
+    .header_navbar .navbar .navbar_menu {
+      width: 55%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center; }
       @media (max-width: 1024px) {
-        .header_navbar .navbar_menu a {
-          font-size: 1.2rem; } }
-      .header_navbar .navbar_menu a::before {
-        content: '';
-        position: absolute;
-        top: 63%;
-        max-width: 85px;
+        .header_navbar .navbar .navbar_menu {
+          margin-right: 2%;
+          width: 50%; } }
+      @media (max-width: 767px) {
+        .header_navbar .navbar .navbar_menu {
+          display: none; } }
+      .header_navbar .navbar .navbar_menu img:hover {
+        cursor: pointer; }
+      .header_navbar .navbar .navbar_menu a {
+        text-decoration: none;
+        max-height: 100px;
+        height: 10vh;
+        width: 15%;
+        text-align: center;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 0.91rem;
+        text-transform: uppercase;
+        transition: all .4s ease-in-out;
+        position: relative; }
+        @media (max-width: 1024px) {
+          .header_navbar .navbar .navbar_menu a {
+            font-size: 1.2rem; } }
+        .header_navbar .navbar .navbar_menu a::before {
+          content: '';
+          position: absolute;
+          top: 63%;
+          max-width: 85px;
+          width: 100%;
+          height: 2px;
+          background-color: #F4BF87;
+          transform-origin: right;
+          transform: scale(0);
+          transition: transform .5s; }
+        .header_navbar .navbar .navbar_menu a:hover::before {
+          transform-origin: left;
+          transform: scale(1); }
+        .header_navbar .navbar .navbar_menu a:hover {
+          color: #F4BF87; }
+    .header_navbar .navbar .burger-btn {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 5%;
+      width: 10vw;
+      height: 10vh; }
+      .header_navbar .navbar .burger-btn:hover {
+        cursor: pointer; }
+      .header_navbar .navbar .burger-btn.active span:nth-of-type(1) {
+        display: none; }
+      .header_navbar .navbar .burger-btn.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 8px) rotate(45deg); }
+      .header_navbar .navbar .burger-btn.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, -8px) rotate(-45deg); }
+      .header_navbar .navbar .burger-btn .menu-btn {
         width: 100%;
-        height: 2px;
-        background-color: #F4BF87;
-        transform-origin: right;
-        transform: scale(0);
-        transition: transform .5s; }
-      .header_navbar .navbar_menu a:hover::before {
-        transform-origin: left;
-        transform: scale(1); }
-      .header_navbar .navbar_menu a:hover {
-        color: #F4BF87; }
+        height: 100%;
+        z-index: 2;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        .header_navbar .navbar .burger-btn .menu-btn span {
+          width: 24px;
+          height: 3px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          transition: all 0.5s; }
+          .header_navbar .navbar .burger-btn .menu-btn span:nth-of-type(2) {
+            top: calc(50% - 8px); }
+          .header_navbar .navbar .burger-btn .menu-btn span:nth-of-type(3) {
+            top: calc(50% + 8px); }
+      @media (min-width: 767.98px) {
+        .header_navbar .navbar .burger-btn {
+          display: none; } }
+    .header_navbar .navbar .header_menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 10vh 6%;
+      background: linear-gradient(360deg, rgba(237, 215, 137, 0.9), rgba(233, 130, 131, 0.9)), url(../img/eagle.svg);
+      background-size: cover;
+      background-position: center;
+      transform: translateY(-100%);
+      transition: transform 0.5s; }
+      .header_navbar .navbar .header_menu .logo {
+        position: absolute;
+        top: 3vh;
+        width: 17vw; }
+      .header_navbar .navbar .header_menu .header_list {
+        flex-direction: column; }
+        .header_navbar .navbar .header_menu .header_list li {
+          margin-top: 4%;
+          height: 10vh;
+          width: 100%;
+          position: relative; }
+          .header_navbar .navbar .header_menu .header_list li::before {
+            content: '';
+            position: absolute;
+            bottom: 25%;
+            left: calc(50% - 10vw);
+            width: 20vw;
+            height: 2px;
+            background-color: #F4BF87;
+            transform-origin: right;
+            transform: scale(0);
+            transition: transform .5s; }
+          .header_navbar .navbar .header_menu .header_list li:hover::before {
+            transform-origin: left;
+            transform: scale(1); }
+        .header_navbar .navbar .header_menu .header_list .header_link {
+          color: #FFFFFF;
+          text-decoration: none;
+          font-size: calc((1vh + 1vw)*1.4);
+          font-weight: 700;
+          text-transform: uppercase;
+          width: 100%;
+          height: 100%; }
+          .header_navbar .navbar .header_menu .header_list .header_link:hover {
+            cursor: pointer;
+            color: #F4BF87; }
+      .header_navbar .navbar .header_menu.active {
+        transform: translateY(0); }
 
 .banner {
   height: 100vh;
