@@ -595,14 +595,27 @@ ul, li {
       z-index: -1;
       top: 3%;
       left: 21.4%; }
+      @media (max-width: 767.98px) {
+        .unique-section .devices .tablet-image {
+          left: 2%; } }
     .unique-section .devices .tablet-frame {
-      width: 100%;
-      position: relative; }
+      width: 60%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%); }
+      @media (max-width: 767.98px) {
+        .unique-section .devices .tablet-frame {
+          width: 100%; } }
     .unique-section .devices .device-phone {
       width: 20%;
       position: absolute;
       top: 38%;
       right: 14%; }
+      @media (max-width: 767.98px) {
+        .unique-section .devices .device-phone {
+          width: 30%;
+          top: 45%;
+          right: 10%; } }
       .unique-section .devices .device-phone img {
         width: 100%; }
       .unique-section .devices .device-phone .phone-image {
